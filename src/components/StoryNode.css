@@ -1,0 +1,197 @@
+/* Whimsical editorial node styling */
+.story-node {
+  width: 260px;
+  min-width: 200px;
+  max-width: 260px;
+  padding: 1.15rem 1.35rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 2px solid;
+  font-family: 'Source Serif 4', Georgia, serif;
+}
+
+/* Layer 0 = opening (root) – stone-700 */
+.story-node--root.story-node--layer-0,
+.story-node--layer-0 {
+  background: var(--tw-stone-700);
+  border-color: var(--editorial-accent);
+  box-shadow: 0 4px 0 var(--tw-zinc-700);
+}
+
+/* Layers 1–15 – Tailwind 700 only */
+.story-node--option.story-node--layer-1 {
+  background: var(--tw-blue-700);
+  border-color: var(--tw-blue-700);
+  box-shadow: 0 4px 0 #1e40af;
+}
+.story-node--option.story-node--layer-2 {
+  background: var(--tw-teal-700);
+  border-color: var(--tw-teal-700);
+  box-shadow: 0 4px 0 #0d5c54;
+}
+.story-node--option.story-node--layer-3 {
+  background: var(--tw-red-700);
+  border-color: var(--tw-red-700);
+  box-shadow: 0 4px 0 #991b1b;
+}
+.story-node--option.story-node--layer-4 {
+  background: var(--tw-violet-700);
+  border-color: var(--tw-violet-700);
+  box-shadow: 0 4px 0 #5b21b6;
+}
+.story-node--option.story-node--layer-5 {
+  background: var(--tw-green-700);
+  border-color: var(--tw-green-700);
+  box-shadow: 0 4px 0 #166534;
+}
+.story-node--option.story-node--layer-6 {
+  background: var(--tw-orange-700);
+  border-color: var(--tw-orange-700);
+  box-shadow: 0 4px 0 #9a3412;
+}
+.story-node--option.story-node--layer-7 {
+  background: var(--tw-slate-700);
+  border-color: var(--tw-slate-700);
+  box-shadow: 0 4px 0 #1e293b;
+}
+.story-node--option.story-node--layer-8 {
+  background: var(--tw-amber-700);
+  border-color: var(--tw-amber-700);
+  box-shadow: 0 4px 0 #92400e;
+}
+.story-node--option.story-node--layer-9 {
+  background: var(--tw-emerald-700);
+  border-color: var(--tw-emerald-700);
+  box-shadow: 0 4px 0 #065f46;
+}
+.story-node--option.story-node--layer-10 {
+  background: var(--tw-zinc-700);
+  border-color: var(--tw-zinc-700);
+  box-shadow: 0 4px 0 #27272a;
+}
+.story-node--option.story-node--layer-11 {
+  background: var(--tw-yellow-700);
+  border-color: var(--tw-yellow-700);
+  box-shadow: 0 4px 0 #854d0e;
+}
+.story-node--option.story-node--layer-12 {
+  background: var(--tw-purple-700);
+  border-color: var(--tw-purple-700);
+  box-shadow: 0 4px 0 #6b21a8;
+}
+.story-node--option.story-node--layer-13 {
+  background: var(--tw-rose-700);
+  border-color: var(--tw-rose-700);
+  box-shadow: 0 4px 0 #9f1239;
+}
+.story-node--option.story-node--layer-14 {
+  background: var(--tw-lime-700);
+  border-color: var(--tw-lime-700);
+  box-shadow: 0 4px 0 #3f6212;
+}
+.story-node--option.story-node--layer-15 {
+  background: var(--tw-fuchsia-700);
+  border-color: var(--tw-fuchsia-700);
+  box-shadow: 0 4px 0 #86198f;
+}
+
+.story-node--selected {
+  border-color: var(--editorial-accent);
+  box-shadow: 0 4px 0 var(--tw-stone-700), 0 0 0 2px var(--editorial-accent-soft);
+}
+
+.story-node__content {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--editorial-white, #FEFCF7);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-style: normal;
+}
+
+.story-node__handle {
+  width: 12px;
+  height: 12px;
+  background: var(--editorial-white);
+  border: 2px solid var(--tw-slate-700);
+}
+
+.story-node__handle:hover {
+  background: var(--editorial-accent);
+  border-color: var(--tw-gray-700);
+}
+
+/* Loading overlay */
+.story-canvas-loading {
+  position: absolute;
+  top: 4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background: oklch(27.9% 0.041 260.031);
+  border: 2px solid var(--editorial-accent);
+  color: var(--editorial-white);
+  font-size: 0.9rem;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 600;
+}
+
+.story-canvas-error {
+  position: absolute;
+  top: 4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background: var(--tw-gray-700);
+  border: 2px solid var(--editorial-accent);
+  color: var(--editorial-white);
+  font-size: 0.9rem;
+  font-family: 'Source Serif 4', Georgia, serif;
+}
+
+.story-canvas-restart {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 2px solid var(--tw-stone-700);
+  background: var(--editorial-cream);
+  color: var(--editorial-ink);
+  font-size: 0.9rem;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.story-canvas-restart:hover {
+  border-color: var(--editorial-accent);
+  color: var(--editorial-accent);
+  background: var(--editorial-white);
+}
+
+/* React Flow canvas – Tailwind 700 where applicable */
+.story-canvas-wrap {
+  --xy-background-color: oklch(96.6% 0.005 106.5);
+  --xy-background-pattern-dots-color-default: var(--editorial-warm);
+  --xy-background-pattern-lines-color-default: var(--editorial-warm);
+  --xy-background-pattern-cross-color-default: var(--editorial-warm);
+  --xy-controls-button-background-color-default: var(--editorial-cream);
+  --xy-controls-button-background-color-hover-default: var(--editorial-white);
+  --xy-controls-button-color-default: var(--tw-stone-700);
+  --xy-controls-button-color-hover-default: oklch(59.2% 0.249 0.584);
+  --xy-controls-button-border-color-default: var(--tw-stone-700);
+  --xy-edge-stroke: var(--tw-slate-700);
+  --xy-edge-stroke-width: 4;
+  --xy-edge-stroke-selected: var(--tw-zinc-700);
+  --xy-connectionline-stroke: var(--tw-slate-700);
+  --xy-connectionline-stroke-width: 4;
+}
