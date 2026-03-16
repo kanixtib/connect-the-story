@@ -7,7 +7,8 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1 className="app-title">Connect <span>the Story</span></h1>
+        <h1 className="app-title">Connect the Story</h1>
+        <p className="app-tagline">An interactive narrative</p>
       </header>
       <StoryCanvas key={restartKey} onRestart={() => setRestartKey((k) => k + 1)} />
     </div>

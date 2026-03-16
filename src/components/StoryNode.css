@@ -1,197 +1,167 @@
-/* Whimsical editorial node styling */
+/* ── Story Node – New Yorker Editorial ─────────────── */
+
 .story-node {
-  width: 260px;
-  min-width: 200px;
-  max-width: 260px;
-  padding: 1.15rem 1.35rem;
+  width: 280px;
+  min-width: 220px;
+  max-width: 280px;
+  padding: 1rem 1.25rem 1rem 1.1rem;
   box-sizing: border-box;
-  border-radius: 4px;
-  border: 2px solid;
+  border-radius: 0;                   /* sharp, print-like corners */
+  border: 1px solid var(--ny-rule);
+  border-left: 4px solid var(--ny-ink);  /* the left-rule motif */
+  background: var(--ny-white);
   font-family: 'Source Serif 4', Georgia, serif;
+  position: relative;
 }
 
-/* Layer 0 = opening (root) – stone-700 */
+/* ── Root node: ink-on-cream masthead treatment ── */
 .story-node--root.story-node--layer-0,
 .story-node--layer-0 {
-  background: var(--tw-stone-700);
-  border-color: var(--editorial-accent);
-  box-shadow: 0 4px 0 var(--tw-zinc-700);
+  background: var(--ny-ink);
+  border: 1px solid var(--ny-ink);
+  border-left: 4px solid var(--ny-gold);
+  box-shadow: none;
 }
 
-/* Layers 1–15 – Tailwind 700 only */
-.story-node--option.story-node--layer-1 {
-  background: var(--tw-blue-700);
-  border-color: var(--tw-blue-700);
-  box-shadow: 0 4px 0 #1e40af;
-}
-.story-node--option.story-node--layer-2 {
-  background: var(--tw-teal-700);
-  border-color: var(--tw-teal-700);
-  box-shadow: 0 4px 0 #0d5c54;
-}
-.story-node--option.story-node--layer-3 {
-  background: var(--tw-red-700);
-  border-color: var(--tw-red-700);
-  box-shadow: 0 4px 0 #991b1b;
-}
-.story-node--option.story-node--layer-4 {
-  background: var(--tw-violet-700);
-  border-color: var(--tw-violet-700);
-  box-shadow: 0 4px 0 #5b21b6;
-}
-.story-node--option.story-node--layer-5 {
-  background: var(--tw-green-700);
-  border-color: var(--tw-green-700);
-  box-shadow: 0 4px 0 #166534;
-}
-.story-node--option.story-node--layer-6 {
-  background: var(--tw-orange-700);
-  border-color: var(--tw-orange-700);
-  box-shadow: 0 4px 0 #9a3412;
-}
-.story-node--option.story-node--layer-7 {
-  background: var(--tw-slate-700);
-  border-color: var(--tw-slate-700);
-  box-shadow: 0 4px 0 #1e293b;
-}
-.story-node--option.story-node--layer-8 {
-  background: var(--tw-amber-700);
-  border-color: var(--tw-amber-700);
-  box-shadow: 0 4px 0 #92400e;
-}
-.story-node--option.story-node--layer-9 {
-  background: var(--tw-emerald-700);
-  border-color: var(--tw-emerald-700);
-  box-shadow: 0 4px 0 #065f46;
-}
-.story-node--option.story-node--layer-10 {
-  background: var(--tw-zinc-700);
-  border-color: var(--tw-zinc-700);
-  box-shadow: 0 4px 0 #27272a;
-}
-.story-node--option.story-node--layer-11 {
-  background: var(--tw-yellow-700);
-  border-color: var(--tw-yellow-700);
-  box-shadow: 0 4px 0 #854d0e;
-}
-.story-node--option.story-node--layer-12 {
-  background: var(--tw-purple-700);
-  border-color: var(--tw-purple-700);
-  box-shadow: 0 4px 0 #6b21a8;
-}
-.story-node--option.story-node--layer-13 {
-  background: var(--tw-rose-700);
-  border-color: var(--tw-rose-700);
-  box-shadow: 0 4px 0 #9f1239;
-}
-.story-node--option.story-node--layer-14 {
-  background: var(--tw-lime-700);
-  border-color: var(--tw-lime-700);
-  box-shadow: 0 4px 0 #3f6212;
-}
-.story-node--option.story-node--layer-15 {
-  background: var(--tw-fuchsia-700);
-  border-color: var(--tw-fuchsia-700);
-  box-shadow: 0 4px 0 #86198f;
+.story-node--root.story-node--layer-0 .story-node__content,
+.story-node--layer-0 .story-node__content {
+  color: var(--ny-white);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
+/* ── Option node layer colors (left-border cycles) ── */
+/* Layer 1 – ink */
+.story-node--option.story-node--layer-1  { border-left-color: var(--ny-ink); }
+/* Layer 2 – gold */
+.story-node--option.story-node--layer-2  { border-left-color: var(--ny-gold); }
+/* Layer 3 – muted red */
+.story-node--option.story-node--layer-3  { border-left-color: var(--ny-red); }
+/* Layer 4 – slate */
+.story-node--option.story-node--layer-4  { border-left-color: var(--ny-slate); }
+/* Layer 5 – teal */
+.story-node--option.story-node--layer-5  { border-left-color: var(--ny-teal); }
+/* Layer 6 – gold-dark */
+.story-node--option.story-node--layer-6  { border-left-color: var(--ny-gold-dark); }
+/* Layer 7 – muted */
+.story-node--option.story-node--layer-7  { border-left-color: var(--ny-muted); }
+/* Layers 8-15 – cycle */
+.story-node--option.story-node--layer-8  { border-left-color: var(--ny-ink); }
+.story-node--option.story-node--layer-9  { border-left-color: var(--ny-gold); }
+.story-node--option.story-node--layer-10 { border-left-color: var(--ny-red); }
+.story-node--option.story-node--layer-11 { border-left-color: var(--ny-slate); }
+.story-node--option.story-node--layer-12 { border-left-color: var(--ny-teal); }
+.story-node--option.story-node--layer-13 { border-left-color: var(--ny-gold-dark); }
+.story-node--option.story-node--layer-14 { border-left-color: var(--ny-muted); }
+.story-node--option.story-node--layer-15 { border-left-color: var(--ny-ink); }
+
+/* ── Selected state ── */
 .story-node--selected {
-  border-color: var(--editorial-accent);
-  box-shadow: 0 4px 0 var(--tw-stone-700), 0 0 0 2px var(--editorial-accent-soft);
+  border-color: var(--ny-gold);
+  border-left-color: var(--ny-gold);
+  box-shadow: 0 0 0 1px var(--ny-gold);
 }
 
+/* ── Content text ── */
 .story-node__content {
   margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: var(--editorial-white, #FEFCF7);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--ny-ink);
   word-wrap: break-word;
   overflow-wrap: break-word;
-  font-style: normal;
+  font-style: italic;
 }
 
+/* ── Connection handles ── */
 .story-node__handle {
-  width: 12px;
-  height: 12px;
-  background: var(--editorial-white);
-  border: 2px solid var(--tw-slate-700);
+  width: 10px;
+  height: 10px;
+  background: var(--ny-cream);
+  border: 1.5px solid var(--ny-ink-soft);
+  border-radius: 0;               /* square handles – more print-like */
 }
 
 .story-node__handle:hover {
-  background: var(--editorial-accent);
-  border-color: var(--tw-gray-700);
+  background: var(--ny-gold);
+  border-color: var(--ny-gold-dark);
 }
 
-/* Loading overlay */
+/* ── Loading overlay ── */
 .story-canvas-loading {
   position: absolute;
-  top: 4.5rem;
+  top: 5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  padding: 10px 20px;
-  border-radius: 4px;
-  background: oklch(27.9% 0.041 260.031);
-  border: 2px solid var(--editorial-accent);
-  color: var(--editorial-white);
-  font-size: 0.9rem;
+  padding: 0.55rem 1.25rem;
+  background: var(--ny-ink);
+  border-left: 3px solid var(--ny-gold);
+  color: var(--ny-white);
+  font-size: 0.8rem;
   font-family: 'Source Serif 4', Georgia, serif;
-  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
 }
 
+/* ── Error message ── */
 .story-canvas-error {
   position: absolute;
-  top: 4.5rem;
+  top: 5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  padding: 10px 20px;
-  border-radius: 4px;
-  background: var(--tw-gray-700);
-  border: 2px solid var(--editorial-accent);
-  color: var(--editorial-white);
-  font-size: 0.9rem;
+  padding: 0.55rem 1.25rem;
+  background: var(--ny-cream);
+  border: 1px solid var(--ny-rule);
+  border-left: 3px solid var(--ny-red);
+  color: var(--ny-red);
+  font-size: 0.8rem;
   font-family: 'Source Serif 4', Georgia, serif;
+  letter-spacing: 0.03em;
 }
 
+/* ── Restart button ── */
 .story-canvas-restart {
   position: absolute;
   top: 1rem;
   right: 1.5rem;
   z-index: 10;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  border: 2px solid var(--tw-stone-700);
-  background: var(--editorial-cream);
-  color: var(--editorial-ink);
-  font-size: 0.9rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--ny-ink);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ny-ink);
+  font-size: 0.72rem;
   font-family: 'Source Serif 4', Georgia, serif;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.12em;
+  transition: background 0.15s, color 0.15s;
 }
 
 .story-canvas-restart:hover {
-  border-color: var(--editorial-accent);
-  color: var(--editorial-accent);
-  background: var(--editorial-white);
+  background: var(--ny-ink);
+  color: var(--ny-white);
 }
 
-/* React Flow canvas – Tailwind 700 where applicable */
+/* ── React Flow canvas overrides ── */
 .story-canvas-wrap {
-  --xy-background-color: oklch(96.6% 0.005 106.5);
-  --xy-background-pattern-dots-color-default: var(--editorial-warm);
-  --xy-background-pattern-lines-color-default: var(--editorial-warm);
-  --xy-background-pattern-cross-color-default: var(--editorial-warm);
-  --xy-controls-button-background-color-default: var(--editorial-cream);
-  --xy-controls-button-background-color-hover-default: var(--editorial-white);
-  --xy-controls-button-color-default: var(--tw-stone-700);
-  --xy-controls-button-color-hover-default: oklch(59.2% 0.249 0.584);
-  --xy-controls-button-border-color-default: var(--tw-stone-700);
-  --xy-edge-stroke: var(--tw-slate-700);
-  --xy-edge-stroke-width: 4;
-  --xy-edge-stroke-selected: var(--tw-zinc-700);
-  --xy-connectionline-stroke: var(--tw-slate-700);
-  --xy-connectionline-stroke-width: 4;
+  --xy-background-color:                          var(--ny-cream);
+  --xy-background-pattern-dots-color-default:     var(--ny-rule);
+  --xy-background-pattern-lines-color-default:    var(--ny-rule);
+  --xy-background-pattern-cross-color-default:    var(--ny-rule);
+  --xy-controls-button-background-color-default:  var(--ny-cream);
+  --xy-controls-button-background-color-hover-default: var(--ny-warm);
+  --xy-controls-button-color-default:             var(--ny-ink);
+  --xy-controls-button-color-hover-default:       var(--ny-gold-dark);
+  --xy-controls-button-border-color-default:      var(--ny-rule);
+  --xy-edge-stroke:                               var(--ny-ink-soft);
+  --xy-edge-stroke-width:                         2;
+  --xy-edge-stroke-selected:                      var(--ny-gold);
+  --xy-connectionline-stroke:                     var(--ny-gold);
+  --xy-connectionline-stroke-width:               2;
 }

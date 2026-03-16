@@ -195,7 +195,7 @@ export function StoryCanvas({ onRestart }: StoryCanvasProps) {
 
           const baseY = chosenPosition.y + 220;
           // Fixed node width 260px; use 320px between left edges so options never overlap
-          const nodeWidth = 260;
+          const nodeWidth = 280;
           const gap = 60;
           const spacing = nodeWidth + gap;
           const totalWidth = (continuations.length - 1) * spacing;
@@ -262,10 +262,10 @@ export function StoryCanvas({ onRestart }: StoryCanvasProps) {
         defaultViewport={{ x: 0, y: 0, zoom: 1 }}
       >
         <Background
-          variant={BackgroundVariant.Dots}
-          gap={8}
-          size={0.4}
-          color="#D4D1CC"
+          variant={BackgroundVariant.Lines}
+          gap={32}
+          size={0.5}
+          color="#DDD9D0"
         />
         <Controls />
       </ReactFlow>
