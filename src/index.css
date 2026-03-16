@@ -1,42 +1,31 @@
 :root {
-  /* Background */
-  --editorial-cream: oklch(96.6% 0.005 106.5);
-  --editorial-warm: oklch(92% 0.006 106.5);
+  /* New Yorker editorial palette */
+  --ny-cream:      #FAF8F2;   /* warm paper white – main background */
+  --ny-warm:       #F0EDE3;   /* slightly darker cream – subtle surfaces */
+  --ny-ink:        #1C1917;   /* near-black warm ink – primary text */
+  --ny-ink-soft:   #44403C;   /* stone – secondary text, muted labels */
+  --ny-gold:       #C8A84B;   /* masthead gold – accent */
+  --ny-gold-dark:  #8B6914;   /* deeper gold – shadows, hover */
+  --ny-rule:       #D4CFC5;   /* warm light gray – dividers, borders */
+  --ny-muted:      #7A7168;   /* warm mid-gray – captions, meta */
+  --ny-red:        #8B3A3A;   /* muted editorial red */
+  --ny-slate:      #334155;   /* editorial slate */
+  --ny-teal:       #0F5F5A;   /* muted teal */
+  --ny-white:      #FEFCF7;   /* off-white – text on dark */
 
-  /* Tailwind 700 palette – all non-background colors */
-  --tw-slate-700: #334155;
-  --tw-gray-700: #374151;
-  --tw-zinc-700: #3f3f46;
-  --tw-stone-700: #44403c;
-  --tw-red-700: #b91c1c;
-  --tw-orange-700: #c2410c;
-  --tw-amber-700: #b45309;
-  --tw-yellow-700: #a16207;
-  --tw-lime-700: #4d7c0f;
-  --tw-green-700: #15803d;
-  --tw-emerald-700: #047857;
-  --tw-teal-700: #0f766e;
-  --tw-cyan-700: #0e7490;
-  --tw-sky-700: #0369a1;
-  --tw-blue-700: #1d4ed8;
-  --tw-indigo-700: #4338ca;
-  --tw-violet-700: #6d28d9;
-  --tw-purple-700: #7e22ce;
-  --tw-fuchsia-700: #a21caf;
-  --tw-pink-700: #be185d;
-  --tw-rose-700: #be123c;
+  /* Legacy aliases used by ReactFlow overrides */
+  --editorial-cream:        var(--ny-cream);
+  --editorial-warm:         var(--ny-warm);
+  --editorial-accent:       var(--ny-gold);
+  --editorial-accent-soft:  oklch(72% 0.12 80 / 0.3);
+  --editorial-ink:          var(--ny-ink);
+  --editorial-white:        var(--ny-white);
 
-  /* Semantic: accent/title/selected */
-  --editorial-accent: oklch(59.2% 0.249 0.584);
-  --editorial-accent-soft: oklch(59.2% 0.249 0.584 / 0.25);
-  --editorial-ink: var(--tw-gray-700);
-  --editorial-white: #fefcf7;
-
-  font-family: 'Source Serif 4', Georgia, serif;
-  line-height: 1.5;
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  line-height: 1.55;
   font-weight: 400;
-  color: var(--editorial-ink);
-  background-color: var(--editorial-cream);
+  color: var(--ny-ink);
+  background-color: var(--ny-cream);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
