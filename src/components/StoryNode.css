@@ -1,10 +1,10 @@
 /* ── Story Node – New Yorker Editorial ─────────────── */
 
 .story-node {
-  width: 280px;
-  min-width: 220px;
-  max-width: 280px;
-  padding: 1rem 1.25rem 1rem 1.1rem;
+  width: 140px;
+  min-width: 110px;
+  max-width: 140px;
+  padding: 0.5rem 0.625rem 0.5rem 0.55rem;
   box-sizing: border-box;
   border-radius: 0;                   /* sharp, print-like corners */
   border: 1px solid var(--ny-rule);
